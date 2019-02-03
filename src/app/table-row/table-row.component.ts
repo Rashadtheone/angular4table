@@ -7,7 +7,7 @@ import { Component, OnInit,Input } from '@angular/core';
 })
 export class TableRowComponent implements OnInit {
 
-  @Input() people: any;
+  @Input() peoples: any;
   @Input() columns: string[];
   constructor() { }
 

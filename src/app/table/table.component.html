@@ -1,20 +1,15 @@
-<div class="component-style table-component">
-
-    <div class="component-tag">
-      <span>app-table</span>
-    </div>
-  
+<div class="main-table">
     <br>
-  <table>
+  <table class= "">
     <thead>
       <tr>
-        <th *ngFor="let c of columns">
+        <th class="tHeader"  *ngFor="let c of columns">
           {{c}}
         </th>
       </tr>
     </thead>
-    <tbody>
-      <tr *ngFor="let people of peoples | async">
+    <tbody >
+      <tr class="content" *ngFor="let people of peoples | async">
         <td *ngFor="let c of columns">
           {{people[c]}} 
         </td>

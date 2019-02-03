@@ -1,0 +1,21 @@
+.main-table {
+    background: yellow;
+    height: 82vh;
+    overflow: scroll;
+}
+
+.tHeader {
+    background: black;
+    color:white;
+    height: 10vh;
+    width: 10vw;
+    overflow: scroll;
+}
+.content {
+    background: pink;
+    height: 10vh;
+    overflow: scroll;
+}
+    /* position: fixed;
+    top: 30vh;
+} */

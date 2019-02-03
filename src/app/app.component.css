@@ -1,0 +1,9 @@
+.main-container {
+background: blue;
+}
+
+.main-table {
+    
+    height: 96vh;
+    overflow: hidden;;
+}
