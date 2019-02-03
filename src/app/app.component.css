@@ -1,9 +1,16 @@
 .main-container {
-background: blue;
+    background:black;
+
 }
 
 .main-table {
-    
     height: 96vh;
     overflow: hidden;;
+}
+.footer {
+    color: white;
+}
+
+.header {
+    color: white;
 }

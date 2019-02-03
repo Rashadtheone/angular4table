@@ -6,14 +6,16 @@ import { TableComponent } from './table/table.component';
 import { TableRowComponent } from './table-row/table-row.component';
 
 import {PeoplesService} from './services/peoples.service';
-import { FooterComponent } from './footer/footer.component'
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     TableComponent,
     TableRowComponent,
-    FooterComponent
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule
