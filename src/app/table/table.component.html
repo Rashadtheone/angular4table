@@ -1,10 +1,16 @@
-<table>
-  <tr>
-    <th>Name</th>
-    <th>age</th>
-  </tr>
-  <tr>
-    <td>swag</td>
-    <td>7</td>
-  </tr>
-</table>
+<div class="component-style table-component">
+
+    <div class="component-tag">
+      <span>app-table</span>
+    </div>
+  
+    <br>
+  
+    <table>
+      <tr>
+        <th *ngFor="let p of columns">{{p}}</th>
+      </tr>
+      <tr class="component-style table-row-component" *ngFor="let pe of peoples | async" app-table-row [peoples]="pep" [columns]="columns">
+      </tr>
+    </table>
+  </div>

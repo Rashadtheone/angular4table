@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
   selector: 'app-table-row',
@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableRowComponent implements OnInit {
 
+  @Input() people: any;
+  @Input() columns: string[];
   constructor() { }
 
   ngOnInit() {
