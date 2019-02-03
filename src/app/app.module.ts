@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { TableComponent } from './table/table.component';
 import { TableRowComponent } from './table-row/table-row.component';
 
+import {PeoplesService} from './services/peoples.service'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +16,10 @@ import { TableRowComponent } from './table-row/table-row.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    PeoplesService
+  ],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }

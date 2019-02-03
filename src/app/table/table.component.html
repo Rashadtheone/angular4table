@@ -5,12 +5,20 @@
     </div>
   
     <br>
-  
-    <table>
+  <table>
+    <thead>
       <tr>
-        <th *ngFor="let p of columns">{{p}}</th>
+        <th *ngFor="let c of columns">
+          {{c}}
+        </th>
       </tr>
-      <tr class="component-style table-row-component" *ngFor="let pe of peoples | async" app-table-row [peoples]="pep" [columns]="columns">
+    </thead>
+    <tbody>
+      <tr *ngFor="let people of peoples | async">
+        <td *ngFor="let c of columns">
+          {{people[c]}} 
+        </td>
       </tr>
-    </table>
+    </tbody>
+  </table>
   </div>

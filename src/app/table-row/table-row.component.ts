@@ -12,6 +12,6 @@ export class TableRowComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(this)
   }
-
 }
