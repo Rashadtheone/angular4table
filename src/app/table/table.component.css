@@ -1,7 +1,8 @@
 .main-table {
     background: yellow;
-    height: 82vh;
+    height: 70vh;
     overflow: scroll;
+    margin: 0;
 }
 
 .tHeader {

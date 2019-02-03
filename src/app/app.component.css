@@ -1,6 +1,6 @@
 .main-container {
     background:black;
-
+    height: 100vh;
 }
 
 .main-table {
@@ -12,5 +12,8 @@
 }
 
 .header {
+    color: white;
+}
+.pagi {
     color: white;
 }

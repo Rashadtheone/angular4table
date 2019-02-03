@@ -7,7 +7,8 @@ import { TableRowComponent } from './table-row/table-row.component';
 
 import {PeoplesService} from './services/peoples.service';
 import { FooterComponent } from './footer/footer.component';
-import { HeaderComponent } from './header/header.component'
+import { HeaderComponent } from './header/header.component';
+import { PaginationComponent } from './pagination/pagination.component'
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HeaderComponent } from './header/header.component'
     TableComponent,
     TableRowComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule
