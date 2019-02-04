@@ -6,13 +6,17 @@
         <th class="tHeader"  *ngFor="let c of columns">
           {{c}}
         </th>
+        <th class="tHeader">
+          Status Report
+        </th>
       </tr>
     </thead>
     <tbody >
       <tr class="content" *ngFor="let people of peoples | async">
-        <td *ngFor="let c of columns">
+        <td *ngFor="let c of columns" class="dataStyler">
           {{people[c]}} 
         </td>
+        <td class="dataStyler"><button class="buttonStyle"></button></td>
       </tr>
     </tbody>
   </table>

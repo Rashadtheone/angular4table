@@ -1,8 +1,9 @@
 .main-table {
-    background: yellow;
     height: 70vh;
     overflow: scroll;
     margin: 0;
+    padding: 0;
+    border: solid black;
 }
 
 .tHeader {
@@ -11,10 +12,24 @@
     height: 10vh;
     width: 10vw;
     overflow: scroll;
+    text-transform: capitalize;
 }
 .content {
-    background: pink;
     height: 10vh;
     overflow: scroll;
+    border: solid black;
+}
+.dataStyler {
+    border: solid black;
+    padding: 10px;
+    text-align: center;
+    max-width: 50vw;
+    min-width: 250px;
+    text-transform: capitalize;
 }
 
+.buttonStyle {
+    width: 5vw;
+    height: 5vh;
+    background: black;
+}

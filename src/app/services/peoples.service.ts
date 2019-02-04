@@ -15,10 +15,11 @@ export class PeoplesService {
     
   }
   getColumns(): string [] {
-    return ["name", "phone","email", "email", "data_entry", 
-            "org_num", "address_1", "city", "zip", "2353", "geo",
-            "pan", "pin", "status","fee", "guid","data_exit", "data_first", 
-            "data_recent", "url"]
+    return ["name", "phone","email", "email", 
+            "org_num", "address_1", "city", "zip", "geo",
+            "pan", "pin", "status","fee", "guid","date_entry",
+            "date_exit", "date_first", 
+            "date_recent", "url", "status", "id"]
   }
 
 }

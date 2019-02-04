@@ -1,6 +1,6 @@
 .main-container {
-    background:black;
     height: 97vh;
+    outline: black;
 }
 
 .main-table {
@@ -8,12 +8,12 @@
     overflow: hidden;;
 }
 .footer {
-    color: white;
+    color: black;
 }
 
 .header {
-    color: white;
+    color: black;
 }
 .pagi {
-    color: white;
+    color: black;
 }
