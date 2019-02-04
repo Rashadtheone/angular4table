@@ -33,3 +33,14 @@
     height: 5vh;
     background: black;
 }
+
+.searchFilter {
+width: 5vw;
+height: 5vh;
+}
+
+.search {
+    width: 20vw;
+    height: 5vh;
+    margin: 10px;
+}

@@ -11,6 +11,7 @@ import {Observable} from 'rxjs/Observable';
 export class TableComponent implements OnInit {
 
 public peoples: Observable<any[]>
+// public searchTerm: string;
 public columns: string[];
 
   constructor(private atService: PeoplesService) { }
