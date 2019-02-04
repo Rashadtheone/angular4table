@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SerchFilterComponent } from './serch-filter.component';
+import { PipeComponent } from './pipe.component';
 
-describe('SerchFilterComponent', () => {
-  let component: SerchFilterComponent;
-  let fixture: ComponentFixture<SerchFilterComponent>;
+describe('PipeComponent', () => {
+  let component: PipeComponent;
+  let fixture: ComponentFixture<PipeComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SerchFilterComponent ]
+      declarations: [ PipeComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SerchFilterComponent);
+    fixture = TestBed.createComponent(PipeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

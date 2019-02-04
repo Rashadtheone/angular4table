@@ -10,8 +10,8 @@ import {Observable} from 'rxjs/Observable';
 
 export class TableComponent implements OnInit {
 
-peoples: Observable<any[]>
-columns: string[];
+public peoples: Observable<any[]>
+public columns: string[];
 
   constructor(private atService: PeoplesService) { }
 
