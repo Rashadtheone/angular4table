@@ -1,4 +1,4 @@
-<div class="pagination" *ngIf="count > 0">
+<!-- <div class="pagination" *ngIf="1">
     <span>{{ getMin() }} of {{ getMax() }} of {{ count }}</span>
       <span>{{ totalPages() }} pages</span>
         <button (click)="onPrev()" [disabled]="page === 1 || loading">
@@ -6,4 +6,31 @@
           <button *ngFor="let pageNum of getPages()" (click)="onPage(pageNum)"></button>
         <button (click)="onNext()" [disabled]="lastPage() || loading">Next</button>
     <h1>Yeah</h1>
+</div> -->
+
+<div>
+  <p>{{ page }}  of {{ pages }}</p>
+  <label for="">Select Limit To Show</label>
+  <select name="" id="" (change)="$event.target.value && onLimitChanged($event.target.value)">
+    <option value="">Select Limit</option>
+    <option *ngFor="let l of resultsLimits" [value]="l">
+      {{ l }}
+    </option>
+  </select>
+
+  <button 
+    (click)="onPrev()" 
+    [disabled]="page === 1 || loading">
+    Previous
+  </button>
+
+    <button *ngFor="let pageNum of getPagesCount()" (click)="onPage(pageNum)">
+      {{ pageNum }}
+    </button>
+    
+    <button 
+      (click)="onNext()" 
+      [disabled]="lastPage() || loading">
+      Next
+    </button>
 </div>

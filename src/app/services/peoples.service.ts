@@ -7,19 +7,43 @@ import { PEOPLES } from "./sample_data"
 
 @Injectable()
 export class PeoplesService {
-
   constructor() { }
 
-  getPeoples(): Observable<any[]> {
-    return Observable.of(PEOPLES).delay(100)
-    
+  getPeoples(
+    filter?: string, 
+    query?: string,
+    start: number = 0,
+    stop?: number
+    ): Observable<any[]> {
+    let list = query ? 
+    PEOPLES.filter(p => p[(filter || 'name')].toLowerCase().includes(query.toLowerCase())) :
+    PEOPLES;
+    return stop ? 
+    Observable.of(list.slice(start, stop)).delay(100) :
+    Observable.of(list.slice(start)).delay(100);
   }
   getColumns(): string [] {
-    return ["name", "phone","email", "email", 
+    return ["name", "phone", "email", 
             "org_num", "address_1", "city", "zip", "geo",
             "pan", "pin", "status","fee", "guid","date_entry",
             "date_exit", "date_first", 
             "date_recent", "url", "status", "id"]
+  }
+
+  submitPostRequest(id, status): Promise<{ success: boolean }> {
+    let option = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ id, status })
+    };
+
+    // fetch('/api/submit', options).then().then();
+
+    return new Promise((resolve, reject) => {
+      setTimeout(() => { resolve({ success: true }); }, 1500);
+    });
   }
 
 }

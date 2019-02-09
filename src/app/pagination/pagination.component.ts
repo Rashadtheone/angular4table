@@ -1,4 +1,6 @@
 import { Component, OnInit, Input, Output , EventEmitter } from '@angular/core';
+import { PeoplesService } from '../services/peoples.service';
+import {Observable} from 'rxjs/Observable';
 
 @Component({
   selector: 'app-pagination',
@@ -6,7 +8,10 @@ import { Component, OnInit, Input, Output , EventEmitter } from '@angular/core';
   styleUrls: ['./pagination.component.css']
 })
 export class PaginationComponent implements OnInit {
+  @Input() limit: number; //the current page
+  @Input() resultsLimits: number[]; //the current page
   @Input() page: number; //the current page
+  @Input() pages: number; //the current page
   @Input() count: number; //how many total items there are all in pages
   @Input() perPage: number; // how many pages between next/prev
   @Input() pagesToShow: number; // how many pages between next/prev
@@ -14,8 +19,11 @@ export class PaginationComponent implements OnInit {
 
   @Output() goPrev = new EventEmitter<boolean>();
   @Output() goNext = new EventEmitter<boolean>();
-  @Output() goPage = new EventEmitter<boolean>();
-  constructor() { }
+  @Output() goPage = new EventEmitter<number>();
+  @Output() limitChanged = new EventEmitter<number>();
+
+  public peoples: Observable<any[]>
+  constructor(private atService: PeoplesService) { }
 
   getMin(): number {
     return((this.perPage * this.page)- this.perPage) + 1;
@@ -27,8 +35,8 @@ export class PaginationComponent implements OnInit {
     }
     return max;
   }
-  onPage(c: boolean): void {
-    this.goPage.emit(c);
+  onPage(pageNum: number): void {
+    this.goPage.emit(pageNum);
   }
   onPrev(): void {
     this.goPrev.emit(true)
@@ -66,10 +74,19 @@ export class PaginationComponent implements OnInit {
       }
     }
     pages.sort((a,b) => a-b);
-    return pages
+    return pages;
+  }
+
+  getPagesCount() {
+    return Array(this.pages).fill(0).map((x, i) => i + 1);
   }
 
   ngOnInit() {
+    
+  }
+
+  onLimitChanged(value) {
+    this.limitChanged.emit(value);
   }
 
 }
